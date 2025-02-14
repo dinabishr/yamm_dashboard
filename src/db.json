@@ -183,6 +183,137 @@
       "Items": [
         { "name": "T-shirt", "id": "ITM015", "price": 79.99, "quantity": 1 }
       ]
+    },
+    {
+      "id": "ORD015",
+      "reason": "Product not working",
+      "store_name": "Smart Tech",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://smarttech.com",
+      "amount": 129.99,
+      "active": true,
+      "decision": null,
+      "Items": [
+        { "name": "Smart Home Hub", "id": "ITM016", "price": 129.99, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD016",
+      "reason": "Received wrong color",
+      "store_name": "Shoe Universe",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://shoeuniverse.com",
+      "amount": 99.99,
+      "active": false,
+      "decision": null,
+      "Items": [
+        { "name": "Sneakers", "id": "ITM017", "price": 99.99, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD017",
+      "reason": "Faulty screen",
+      "store_name": "Mobile Hub",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://mobilehub.com",
+      "amount": 699.99,
+      "active": true,
+      "decision": null,
+      "Items": [
+        { "name": "Smartphone", "id": "ITM018", "price": 699.99, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD018",
+      "reason": "Item missing parts",
+      "store_name": "Furniture World",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://furnitureworld.com",
+      "amount": 299.99,
+      "active": false,
+      "decision": null,
+      "Items": [
+        { "name": "Dining Table", "id": "ITM019", "price": 299.99, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD019",
+      "reason": "Not what I expected",
+      "store_name": "Book Haven",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://bookhaven.com",
+      "amount": 25.99,
+      "active": true,
+      "decision": null,
+      "Items": [
+        { "name": "Self-Help Book", "id": "ITM020", "price": 25.99, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD020",
+      "reason": "Received duplicate items",
+      "store_name": "Kitchen Essentials",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://kitchenessentials.com",
+      "amount": 55.49,
+      "active": true,
+      "decision": null,
+      "Items": [
+        { "name": "Cutlery Set", "id": "ITM021", "price": 55.49, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD021",
+      "reason": "Poor quality material",
+      "store_name": "Luxury Apparel",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://luxuryapparel.com",
+      "amount": 150.00,
+      "active": false,
+      "decision": null,
+      "Items": [
+        { "name": "Silk Shirt", "id": "ITM022", "price": 150.00, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD022",
+      "reason": "Package was damaged",
+      "store_name": "Tech Accessories",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://techaccessories.com",
+      "amount": 45.00,
+      "active": true,
+      "decision": null,
+      "Items": [
+        { "name": "USB-C Charger", "id": "ITM023", "price": 45.00, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD023",
+      "reason": "Expired product",
+      "store_name": "Organic Mart",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://organicmart.com",
+      "amount": 20.00,
+      "active": true,
+      "decision": null,
+      "Items": [
+        { "name": "Organic Honey", "id": "ITM024", "price": 20.00, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD024",
+      "reason": "Not satisfied",
+      "store_name": "Gaming Paradise",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://gamingparadise.com",
+      "amount": 399.99,
+      "active": false,
+      "decision": null,
+      "Items": [
+        { "name": "Gaming Console", "id": "ITM025", "price": 399.99, "quantity": 1 }
+      ]
     }
+
   ]
 }

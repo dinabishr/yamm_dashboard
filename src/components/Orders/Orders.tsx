@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import CustomTable from "../CustomTable/CustomTable";
 import { Order } from "../../types/order";
 import { Column } from "../../types/column";
-import { Select, MenuItem, Switch, TableCell, Avatar } from "@mui/material";
+import { Select, MenuItem, Switch, Avatar } from "@mui/material";
 import { fetchRefundOrders } from "../../api";
 // import VisibilityIcon from "@mui/icons-material/Visibility";
 import { toast } from "react-toastify";
@@ -56,9 +56,7 @@ const Orders = () => {
       key: "store_logo",
       label: "Store",
       render: (order) => (
-        <TableCell>
-          <Avatar src={order.store_logo} alt={order.store_name} />
-        </TableCell>
+        <Avatar src={order.store_logo} alt={order.store_name} />
       ),
     },
     {
