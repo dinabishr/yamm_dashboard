@@ -1,0 +1,188 @@
+{
+    "refunds":
+[
+    {
+      "id": "ORD001",
+      "reason": "Defective product",
+      "store_name": "Tech Haven",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://techhaven.com",
+      "amount": 150.75,
+      "active": true,
+      "decision": null,
+      "Items": [
+        { "name": "Wireless Mouse", "id": "ITM001", "price": 25.5, "quantity": 2 },
+        { "name": "Mechanical Keyboard", "id": "ITM002", "price": 99.99, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD002",
+      "reason": "Wrong item delivered",
+      "store_name": "Fashion World",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://fashionworld.com",
+      "amount": 89.99,
+      "active": false,
+      "decision": null,
+      "Items": [
+        { "name": "Leather Jacket", "id": "ITM003", "price": 89.99, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD003",
+      "reason": "Delayed shipping",
+      "store_name": "Gadget Galaxy",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://gadgetgalaxy.com",
+      "amount": 299.99,
+      "active": true,
+      "decision": null,
+      "Items": [
+        { "name": "Smartwatch", "id": "ITM004", "price": 299.99, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD004",
+      "reason": "Size issue",
+      "store_name": "Sneaker Stop",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://sneakerstop.com",
+      "amount": 120.5,
+      "active": true,
+      "decision": null,
+      "Items": [
+        { "name": "Running Shoes", "id": "ITM005", "price": 120.5, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD005",
+      "reason": "Received empty box",
+      "store_name": "Home Essentials",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://homeessentials.com",
+      "amount": 45.99,
+      "active": false,
+      "decision": null,
+      "Items": [
+        { "name": "Coffee Mug Set", "id": "ITM006", "price": 45.99, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD006",
+      "reason": "Not as described",
+      "store_name": "Tech World",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://techworld.com",
+      "amount": 199.99,
+      "active": true,
+      "decision": null,
+      "Items": [
+        { "name": "Gaming Headset", "id": "ITM007", "price": 199.99, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD007",
+      "reason": "Defective",
+      "store_name": "Gadget Hub",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://gadgethub.com",
+      "amount": 75.49,
+      "active": true,
+      "decision": null,
+      "Items": [
+        { "name": "Bluetooth Speaker", "id": "ITM008", "price": 75.49, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD008",
+      "reason": "Changed mind",
+      "store_name": "Home Decor",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://homedecor.com",
+      "amount": 65.99,
+      "active": false,
+      "decision": null,
+      "Items": [
+        { "name": "Table Lamp", "id": "ITM009", "price": 65.99, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD009",
+      "reason": "Item arrived damaged",
+      "store_name": "Electro Store",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://electrostore.com",
+      "amount": 249.99,
+      "active": true,
+      "decision": null,
+      "Items": [
+        { "name": "Tablet", "id": "ITM010", "price": 249.99, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD010",
+      "reason": "Received duplicate items",
+      "store_name": "Fashion Hub",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://fashionhub.com",
+      "amount": 149.99,
+      "active": false,
+      "decision": null,
+      "Items": [
+        { "name": "Denim Jeans", "id": "ITM011", "price": 149.99, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD011",
+      "reason": "Color mismatch",
+      "store_name": "Beauty Store",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://beautystore.com",
+      "amount": 39.99,
+      "active": true,
+      "decision": null,
+      "Items": [
+        { "name": "Lipstick Set", "id": "ITM012", "price": 39.99, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD012",
+      "reason": "Too expensive",
+      "store_name": "Outdoor Gear",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://outdoorgear.com",
+      "amount": 599.99,
+      "active": true,
+      "decision": null,
+      "Items": [
+        { "name": "Camping Tent", "id": "ITM013", "price": 599.99, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD013",
+      "reason": "Late delivery",
+      "store_name": "Health Mart",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://healthmart.com",
+      "amount": 19.99,
+      "active": true,
+      "decision": null,
+      "Items": [
+        { "name": "Vitamin Pack", "id": "ITM014", "price": 19.99, "quantity": 1 }
+      ]
+    },
+    {
+      "id": "ORD014",
+      "reason": "Size issue",
+      "store_name": "Clothing Hub",
+      "store_logo": "https://via.placeholder.com/40",
+      "store_url": "https://clothinghub.com",
+      "amount": 79.99,
+      "active": false,
+      "decision": null,
+      "Items": [
+        { "name": "T-shirt", "id": "ITM015", "price": 79.99, "quantity": 1 }
+      ]
+    }
+  ]
+}
