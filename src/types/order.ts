@@ -1,4 +1,3 @@
-// src/types/order.ts
 export type Order = {
     id: string;
     reason: string;

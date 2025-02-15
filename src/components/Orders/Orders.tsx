@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import CustomTable from "../CustomTable/CustomTable";
 import { Order } from "../../types/order";
 import { Column } from "../../types/column";
-import { Select, MenuItem, Switch, Avatar } from "@mui/material";
+import { Select, MenuItem, Switch, Avatar, IconButton } from "@mui/material";
 import { fetchRefundOrders } from "../../api";
-// import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityIcon from "@mui/icons-material/Visibility";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Orders = () => {
+  const navigate = useNavigate();
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -70,7 +72,7 @@ const Orders = () => {
     },
     { key: "amount", label: "Amount ($)" },
     {
-      key: "Items",
+      key: "total_items",
       label: "Total Items",
       render: (order) => order.Items.length,
     },
@@ -101,17 +103,15 @@ const Orders = () => {
         />
       ),
     },
-    // {
-    //   key: "Items",
-    //   label: "Items",
-    //   render: (order) => (
-    //     <IconButton
-    //       onClick={() => console.log(`Navigating to order ${order.id}`)}
-    //     >
-    //       <VisibilityIcon />
-    //     </IconButton>
-    //   ),
-    // },
+    {
+      key: "Items",
+      label: "Items",
+      render: (order) => (
+        <IconButton onClick={() => navigate(`/orders/${order.id}`)}>
+          <VisibilityIcon />
+        </IconButton>
+      ),
+    },
   ];
 
   return (
