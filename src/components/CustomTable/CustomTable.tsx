@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import {
   Table,
   TableBody,
@@ -11,20 +11,31 @@ import {
 } from "@mui/material";
 import { TableProps } from "../../types/tableProps";
 
-const CustomTable = <T,>({ data, columns }: TableProps<T>) => {
-  const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(15); // Max 15 per page
+// Generic reusable table component
+// this table component accepts any data type and dynamically renders columns based on the provided configuration
+// it supports pagination with max 15 rows per page
 
-  const handleChangePage = (event: unknown, newPage: number) => {
+const CustomTable = <T,>({ data, columns }: TableProps<T>) => {
+  const [page, setPage] = useState(0); // State that manages the current page in pagination
+  const [rowsPerPage, setRowsPerPage] = useState(15); //state to manage no. of rows per page default: 15 per page
+
+  const handleChangePage = (_event: unknown, newPage: number) => {
     setPage(newPage);
   };
 
+  //Handles changes to the number of rows displayed per page
   const handleChangeRowsPerPage = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0); // Reset to first page when rows per page changes
   };
+
+  //Memoized paginated data to improve performance.
+  const paginatedData = useMemo(
+    () => data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage),
+    [data, page, rowsPerPage]
+  );
 
   return (
     <TableContainer
@@ -51,24 +62,22 @@ const CustomTable = <T,>({ data, columns }: TableProps<T>) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data
-            .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-            .map((item, index) => (
-              <TableRow
-                key={index}
-                sx={{
-                  backgroundColor: index % 2 === 0 ? "#FAFAFA" : "#FFFFFF",
-                }}
-              >
-                {columns.map((col) => (
-                  <TableCell key={String(col.key)}>
-                    {col.render
-                      ? col.render(item)
-                      : (item[col.key] as React.ReactNode)}
-                  </TableCell>
-                ))}
-              </TableRow>
-            ))}
+          {paginatedData.map((item, index) => (
+            <TableRow
+              key={index}
+              sx={{
+                backgroundColor: index % 2 === 0 ? "#FAFAFA" : "#FFFFFF",
+              }}
+            >
+              {columns.map((col) => (
+                <TableCell key={String(col.key)}>
+                  {col.render
+                    ? col.render(item) // If a custom render function exists, use it, else display raw data 
+                    : (item[col.key as keyof T] as React.ReactNode)} 
+                </TableCell>
+              ))}
+            </TableRow>
+          ))}
         </TableBody>
       </Table>
       {/* Pagination Controls */}

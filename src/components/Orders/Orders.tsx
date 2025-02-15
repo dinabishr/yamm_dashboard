@@ -8,12 +8,17 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
+/// Orders Component
+//  shows a list of refund orders in a table format
+// Allows users to update order decisions, toggle  activity status, and view order details
+
 const Orders = () => {
   const navigate = useNavigate();
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
+  //Fetch refund orders from the API+ handles loading and error states
   useEffect(() => {
     const getRefundOrders = async () => {
       try {
@@ -21,6 +26,7 @@ const Orders = () => {
         setOrders(data);
       } catch {
         setError("Failed to fetch refunds");
+        toast.error("Failed to load refund orders");
       } finally {
         setLoading(false);
       }
@@ -32,6 +38,8 @@ const Orders = () => {
   if (loading) return <p>Loading refunds...</p>;
   if (error) return <p>{error}</p>;
 
+  // Updates the decision status of a specific order
+  //takes order id as param and new decision value ( accept, reject, escalate)
   const updateDecision = (id: string, newDecision: Order["decision"]) => {
     setOrders((prev) =>
       prev.map((order) =>
@@ -41,6 +49,7 @@ const Orders = () => {
     toast.success(`Refund Order ${id} marked as ${newDecision}`);
   };
 
+  //Toggles the active status of a specific order.
   const toggleActive = (id: string) => {
     setOrders((prev) =>
       prev.map((order) =>
@@ -50,6 +59,8 @@ const Orders = () => {
     toast.info("Refund Order status updated");
   };
 
+  //Column definitions for the table
+  // Each column represents a field in the Order object
   const columns: Column<Order>[] = [
     { key: "id", label: "Order ID" },
     { key: "reason", label: "Reason" },
