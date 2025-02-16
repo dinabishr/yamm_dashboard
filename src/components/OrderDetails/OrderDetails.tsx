@@ -4,6 +4,7 @@ import { Order } from "../../types/order";
 import { fetchRefundOrders } from "../../api";
 import CustomTable from "../CustomTable/CustomTable";
 import { Column } from "../../types/column";
+import { Box, Typography } from "@mui/material";
 
 // OrderDetails Component
 //Displays detailed information about a specific refund order, including order details and item list
@@ -36,15 +37,23 @@ const OrderDetails = () => {
   ];
 
   return (
-    <div>
-      <h2>Order Details for {order.id}</h2>
-      <p>Reason: {order.reason}</p>
-      <p>Store: {order.store_name}</p>
-      <p>Amount: ${order.amount}</p>
-
-      <h3>Items:</h3>
+    <Box>
+      <Box sx={{ textAlign: "left", padding: 3 }}>
+        <Typography variant="h4" fontWeight="bold" mb={2} color="default">
+          Order Details for {order.id}
+        </Typography>
+        <Typography variant="body1" mb={1}>
+          <strong>Reason:</strong> {order.reason}
+        </Typography>
+        <Typography variant="body1" mb={1}>
+          <strong>Store:</strong> {order.store_name}
+        </Typography>
+        <Typography variant="body1" mb={1}>
+          <strong>Amount:</strong> ${order.amount}
+        </Typography>
+      </Box>
       <CustomTable data={order.Items} columns={itemColumns} />
-    </div>
+    </Box>
   );
 };
 

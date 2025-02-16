@@ -2,11 +2,21 @@ import { useState, useEffect } from "react";
 import CustomTable from "../CustomTable/CustomTable";
 import { Order } from "../../types/order";
 import { Column } from "../../types/column";
-import { Select, MenuItem, Switch, Avatar, IconButton } from "@mui/material";
+import {
+  Select,
+  MenuItem,
+  Switch,
+  Avatar,
+  IconButton,
+  Typography,
+  Box,
+  Button,
+} from "@mui/material";
 import { fetchRefundOrders } from "../../api";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { MdOutlineAssignmentReturn } from "react-icons/md";
 
 /// Orders Component
 //  shows a list of refund orders in a table format
@@ -76,15 +86,26 @@ const Orders = () => {
       key: "store_url",
       label: "Store URL",
       render: (order) => (
-        <a href={order.store_url} target="_blank" rel="noopener noreferrer">
-          Visit Store
-        </a>
+        <Button
+          variant="contained"
+          href={order.store_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            backgroundColor: "#f3e5f5",
+            color: "black",
+            textTransform: "none",
+            "&:hover": { backgroundColor: "#7b1fa2", color: "white" },
+          }}
+        >
+          Visit
+        </Button>
       ),
     },
     { key: "amount", label: "Amount ($)" },
     {
       key: "total_items",
-      label: "Total Items",
+      label: "# of Items",
       render: (order) => order.Items.length,
     },
     {
@@ -96,6 +117,11 @@ const Orders = () => {
           onChange={(e) =>
             updateDecision(order.id, e.target.value as Order["decision"])
           }
+          size="small"
+          sx={{
+            minWidth: 80,
+            fontSize: "0.875rem",
+          }}
         >
           <MenuItem value="not yet">Not Yet</MenuItem>
           <MenuItem value="accept">Accept</MenuItem>
@@ -109,6 +135,8 @@ const Orders = () => {
       label: "Active",
       render: (order) => (
         <Switch
+          size="small"
+          color="secondary"
           checked={order.active}
           onChange={() => toggleActive(order.id)}
         />
@@ -119,16 +147,35 @@ const Orders = () => {
       label: "Items",
       render: (order) => (
         <IconButton onClick={() => navigate(`/orders/${order.id}`)}>
-          <VisibilityIcon />
+          <VisibilityIcon color="secondary" />
         </IconButton>
       ),
     },
   ];
 
   return (
-    <div>
+    <Box>
+      <Box
+        display="flex"
+        alignItems="flex-start"
+        flexDirection="column"
+        mb={2}
+        p={2}
+        borderRadius={2}
+      >
+        <Box flexDirection="row" display="flex">
+          <MdOutlineAssignmentReturn size={"7%"} />
+          <Typography variant="h4" fontWeight="bold" mb={2} ml={1}>
+            Refund Orders
+          </Typography>
+        </Box>
+        <Typography>
+          Manage and review all refund requests in one place.
+        </Typography>
+      </Box>
+
       <CustomTable<Order> data={orders} columns={columns} />
-    </div>
+    </Box>
   );
 };
 

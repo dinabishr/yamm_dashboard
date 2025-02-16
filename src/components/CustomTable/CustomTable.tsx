@@ -40,20 +40,28 @@ const CustomTable = <T,>({ data, columns }: TableProps<T>) => {
   return (
     <TableContainer
       component={Paper}
-      sx={{ borderRadius: 3, boxShadow: 3, overflow: "hidden" }}
+      sx={{
+        borderRadius: 3,
+        boxShadow: 3,
+        overflow: "hidden",
+        margin: 2,
+        overflowX: "auto",
+        maxWidth: "99%",
+      }}
     >
-      <Table>
+      <Table sx={{ tableLayout: "auto" }}>
         <TableHead>
-          <TableRow sx={{ backgroundColor: "#EDE7F6" }}>
+          <TableRow sx={{ backgroundColor: "#f3e5f5" }}>
             {columns.map((col) => (
               <TableCell
                 key={String(col.key)}
                 sx={{
                   fontWeight: "bold",
-                  fontSize: "0.9rem",
                   whiteSpace: "nowrap",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
+                  padding: "10px",
+                  fontSize: "0.92rem",
                 }}
               >
                 {col.label}
@@ -63,17 +71,17 @@ const CustomTable = <T,>({ data, columns }: TableProps<T>) => {
         </TableHead>
         <TableBody>
           {paginatedData.map((item, index) => (
-            <TableRow
-              key={index}
-              sx={{
-                backgroundColor: index % 2 === 0 ? "#FAFAFA" : "#FFFFFF",
-              }}
-            >
+            <TableRow key={index}>
               {columns.map((col) => (
-                <TableCell key={String(col.key)}>
+                <TableCell
+                  key={String(col.key)}
+                  sx={{
+                    padding: "10px",
+                  }}
+                >
                   {col.render
-                    ? col.render(item) // If a custom render function exists, use it, else display raw data 
-                    : (item[col.key as keyof T] as React.ReactNode)} 
+                    ? col.render(item) // If a custom render function exists, use it, else display raw data
+                    : (item[col.key as keyof T] as React.ReactNode)}
                 </TableCell>
               ))}
             </TableRow>
