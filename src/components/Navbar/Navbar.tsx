@@ -50,7 +50,10 @@ const Navbar = () => {
           src={logo}
           alt="Logo"
           variant="square"
-          sx={{ width: 70, height: 70 }}
+          sx={{
+            width: isMobile ? 50 : 70, // Adjust width for mobile
+            height: isMobile ? 50 : 70, // Adjust height for mobile
+          }}
         />
       </Box>
 
