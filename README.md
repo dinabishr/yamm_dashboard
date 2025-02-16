@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
+# Refund Orders Dashboard  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview  
+This project is a **Refund Orders Dashboard**, featuring a **navigation sidebar** and a **table** displaying refund order details. Users can update order decisions, toggle activity status, and view detailed order information.  
 
-Currently, two official plugins are available:
+## Features  
+- **Reusable Table Component**: Dynamic and adaptable to different data structures with pagination (15 rows per page).  
+-  **Order Management**: Update refund decisions, toggle activity status, and view order details.  
+-  **API Integration**: Fetches data from a **mock RESTful API** using JSON Server.  
+- **Real-time UI Updates**: Any action reflects instantly without a page reload.  
+- **Toaster Notifications**: Displays success/error messages upon user actions.  
+- **Responsive & Accessible**: Built with **MUI** for a modern, mobile-friendly UI.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack  
+- ⚛ **React.js + TypeScript** – Strongly typed, scalable frontend   
+- ⚡ **Vite** – Fast development environment  
+- 🎨 **Material UI (MUI)** – UI component library  
+- 🗄 **JSON Server** – Mock API  
+- 🔀 **React Router** – Client-side navigation  
+- 🔔 **React Toastify** – Notifications  
+- 📌 **React Icons** – Icon components  
+ 
 
-## Expanding the ESLint configuration
+##  Installation & Setup  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 1️⃣ Clone the Repository  
+```sh  
+git clone https://github.com/dinabishr/yamm_dashboard.git  
+cd yamm_dashboard
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2️⃣ Install Dependencies
+```sh
+npm install
 ```
+3️⃣ Start the Mock API Server
+```sh
+json-server --watch ./src/db.json --port 5000
+```
+4️⃣ Run the Project
+```sh
+npm run dev
+```
+📂 Folder Structure
+
+src  
+│── assets/           # Static assets (logo, images)  
+│── components/       # Reusable components (CustomTable, Navbar, etc.)  
+│── types/            # TypeScript type definitions 
+│── api.ts             # API functions (fetching refund orders)  
+│── db.json           # Mock database for JSON Server  
+│── App.tsx           # Main app component  
+│── main.tsx          # Application entry point  
+
+How It Works
+- The Orders page fetches refund orders from db.json.
+- Users can update decisions, toggle status, and view details.
+- The Order Details page shows items for a specific refund order.
+- Changes are reflected instantly in the table without reloading.
+
+
+
+
+
