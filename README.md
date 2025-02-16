@@ -1,4 +1,5 @@
-![localhost_5173_ (3)](https://github.com/user-attachments/assets/d57ee0fe-2bed-4cb5-9e43-baccd5454883)# Refund Orders Dashboard  
+
+# Refund Orders Dashboard  
 
 ## Overview  
 This project is a **Refund Orders Dashboard**, featuring a **navigation sidebar** and a **table** displaying refund order details. Users can update order decisions, toggle activity status, and view detailed order information.  
@@ -66,13 +67,14 @@ npm run dev
 ![Order Details - Desktop](/public/orderdetails%20desktop.png)
 
 ### Responsive Navbar (iPhone 12 Pro)
-![Responsive Navbar](/public/responsiveNavbar-iPhone12pro.png)
+<img src="/public/responsiveNavbar-iPhone12pro.png" width="400">
 
 ### Order Details (iPhone 12 Pro)
-![Order Details](/public/orderDetails-(iPhone12Pro)%20.png)
+<img src="/public/orderDetails-(iPhone12Pro)%20.png" width="400">
 
 ### Refund Orders (iPad Pro)
 ![Refund Orders (iPad Pro)](/public/refund%20orders%20(iPad%20Pro).png)
+
 
 
 
