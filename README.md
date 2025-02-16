@@ -1,4 +1,4 @@
-# Refund Orders Dashboard  
+![localhost_5173_ (3)](https://github.com/user-attachments/assets/d57ee0fe-2bed-4cb5-9e43-baccd5454883)# Refund Orders Dashboard  
 
 ## Overview  
 This project is a **Refund Orders Dashboard**, featuring a **navigation sidebar** and a **table** displaying refund order details. Users can update order decisions, toggle activity status, and view detailed order information.  
@@ -57,7 +57,22 @@ npm run dev
 - The Order Details page shows items for a specific refund order.
 - Changes are reflected instantly in the table without reloading.
 
+## 📸 Screenshots
 
+### Refund Orders Page - Desktop
+![Refund Orders Page - Desktop](/public/main-desktop.png)
+
+### Order Details - Desktop
+![Order Details - Desktop](/public/orderdetails%20desktop.png)
+
+### Responsive Navbar (iPhone 12 Pro)
+![Responsive Navbar](/public/responsive%20navbar%20-(iPhone%2012%20Pro).png)
+
+### Order Details (iPhone 12 Pro)
+![Order Details](/public/orderdetails-(iPhone%2012%20Pro).png)
+
+### Refund Orders (iPad Pro)
+![Refund Orders (iPad Pro)](/public/refund%20orders%20(iPad%20Pro).png)
 
 
 
