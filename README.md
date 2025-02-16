@@ -28,21 +28,21 @@ This project is a **Refund Orders Dashboard**, featuring a **navigation sidebar*
 git clone https://github.com/dinabishr/yamm_dashboard.git  
 cd yamm_dashboard
 ```
-2️⃣ Install Dependencies
+### 2️⃣ Install Dependencies
 ```sh
 npm install
 ```
-3️⃣ Start the Mock API Server
+### 3️⃣ Start the Mock API Server
 ```sh
 json-server --watch ./src/db.json --port 5000
 ```
-4️⃣ Run the Project
+### 4️⃣ Run the Project
 ```sh
 npm run dev
 ```
-📂 Folder Structure
+## 📂 Folder Structure
 
-src  
+### src  
 │── assets/           # Static assets (logo, images)  
 │── components/       # Reusable components (CustomTable, Navbar, etc.)  
 │── types/            # TypeScript type definitions 
@@ -51,7 +51,7 @@ src
 │── App.tsx           # Main app component  
 │── main.tsx          # Application entry point  
 
-How It Works
+## How It Works
 - The Orders page fetches refund orders from db.json.
 - Users can update decisions, toggle status, and view details.
 - The Order Details page shows items for a specific refund order.
