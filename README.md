@@ -66,10 +66,10 @@ npm run dev
 ![Order Details - Desktop](/public/orderdetails%20desktop.png)
 
 ### Responsive Navbar (iPhone 12 Pro)
-![Responsive Navbar](/public/responsive%20navbar%20-(iPhone%2012%20Pro).png)
+![Responsive Navbar](/public/responsiveNavbar-iPhone12pro.png)
 
 ### Order Details (iPhone 12 Pro)
-![Order Details](/public/orderdetails-(iPhone%2012%20Pro).png)
+![Order Details](/public/orderDetails-(iPhone12Pro)%20.png)
 
 ### Refund Orders (iPad Pro)
 ![Refund Orders (iPad Pro)](/public/refund%20orders%20(iPad%20Pro).png)
